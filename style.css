@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+.letters-section {
+    padding: 10px 60px;
+    width: 100%;
+    height: fit-content;
+    background-color: #fff4da;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.letters-section .title {
+    background-color: #383564;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 100px;
+    color: yellow;
+    margin: 20px 0 60px 0;
+}
+
+.letters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.letters .letter {
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border-radius: 10px;
+    border: 1px solid green;
+    margin: 10px 65px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.letters .letter:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 5px black;
+}
+
+.letters .letter.lathawy {
+    background-color: #fbe962;
+}
+
+.letters .letter.tafkhim {
+    background-color: #40c5f1;
+}
+
+.letters .letter.mix {
+    position: relative;
+    overflow: hidden;
+}
+
+.letters .letter.mix::before {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fbe962;
+}
+
+.letters .letter.mix::after {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #40c5f1;
+}
+
+.letters .letter.mix h2 {
+    z-index: 1;
+}
+
+hr {
+    width: 75%;
+    border: 1px solid #b37961;
+}
+
+.guide {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 10px 0;
+}
+
+.colorGuide {
+    display: flex;
+    align-items: center;
+}
+
+.colorGuide span {
+    width: 20px;
+    height: 20px;
+    margin-left: 3px;
+}
+
+.colorGuide.yellow span {
+    background-color: #fbe962;
+}
+
+.colorGuide.blue span {
+    background-color: #40c5f1;
+}
+
+.colorGuide.yellowBlue span {
+    position: relative;
+}
+
+.colorGuide.yellowBlue span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #40c5f1;
+}
+
+.colorGuide.yellowBlue span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #fbe962;
+}
+
+.notes {
+    background-color: #cbf6fc;
+    padding: 10px;
+    border: 1px solid #5d657a;
+    border-radius: 10px;
+    font-size: 25px;
+    width: 75%;
+    margin: 10px 0;
+    color: #0e2e2b;
+}
+
+ul {
+    list-style: none;
+}
+
+.notes ul li {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .letters-section {
+        padding: 10px 30px;
+    }
+
+    .letters-section .title {
+        font-size: 15px;
+        padding: 5px;
+        margin: 20px 0 40px 0;
+    }
+
+    .letters .letter {
+        width: 90px;
+        height: 90px;
+        padding: 8px;
+        font-size: 30px;
+        margin: 8px 35px;
+
+    }
+
+    .guide {
+        width: 90%;
+        font-size: 10px;
+    }
+    
+    .colorGuide span {
+        width: 15px;
+        height: 15px;
+        margin-left: 3px;
+    }
+
+    hr {
+        width: 90%;
+        border: 1px solid #b37961;
+    }
+
+    .notes {
+        padding: 8px;
+        font-size: 15px;
+        width: 90%;
+        margin: 10px 0;
+        color: #0e2e2b;
+    }
+}
+
+@media (max-width: 640px) {
+    .letters-section {
+        padding:10px;
+    }
+
+    .letters .letter:hover {
+        transform: scale(1.03);
+        box-shadow: 1px 1px 4px black;
+    }
+
+    .letters-section .title {
+        font-size: 12px;
+        padding: 5px;
+        margin: 20px 0 40px 0;
+    }
+
+    .letters .letter {
+        width: 60px;
+        height: 60px;
+        padding: 8px;
+        font-size: 20px;
+    }
+
+    .guide {
+        font-size: 8px;
+    }
+    
+    .colorGuide span {
+        width: 10px;
+        height: 10px;
+        margin-left: 3px;
+    }
+
+    .notes {
+        padding: 8px;
+        font-size: 12px;
+        width: 90%;
+        margin: 10px 0;
+        color: #0e2e2b;
+    }
+}
